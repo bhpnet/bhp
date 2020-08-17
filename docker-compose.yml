@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  bhpdnode0:
+    container_name: bhpdnode0
+    image: "bhpnet/bhpdnode"
+    ports:
+      - "26656-26657:26656-26657"
+    environment:
+      - ID=0
+      - LOG=${LOG:-bhpd.log}
+    volumes:
+      - ./build:/bhpd:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.2
+
+  bhpdnode1:
+    container_name: bhpdnode1
+    image: "bhpnet/bhpdnode"
+    ports:
+      - "26659-26660:26656-26657"
+    environment:
+      - ID=1
+      - LOG=${LOG:-bhpd.log}
+    volumes:
+      - ./build:/bhpd:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.3
+
+  bhpdnode2:
+    container_name: bhpdnode2
+    image: "bhpnet/bhpdnode"
+    environment:
+      - ID=2
+      - LOG=${LOG:-bhpd.log}
+    ports:
+      - "26661-26662:26656-26657"
+    volumes:
+      - ./build:/bhpd:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.4
+
+  bhpdnode3:
+    container_name: bhpdnode3
+    image: "bhpnet/bhpdnode"
+    environment:
+      - ID=3
+      - LOG=${LOG:-bhpd.log}
+    ports:
+      - "26663-26664:26656-26657"
+    volumes:
+      - ./build:/bhpd:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.5
+
+networks:
+  localnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 192.168.10.0/16
+
