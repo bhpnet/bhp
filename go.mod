@@ -36,4 +36,4 @@ require (
 	golang.org/x/text v0.3.2 // indirect
 )
 
-replace github.com/cosmos/cosmos-sdk => github.com/bhpnet/cosmos-sdk v0.37.13-bhp1
+replace github.com/cosmos/cosmos-sdk => github.com/bhpnet/cosmos-sdk v0.37.13-bhp2
