@@ -44,10 +44,10 @@ func defaultGenesisStateOKT() types.Token {
 
 	totalSupply := sdk.NewInt(1000000000)
 	return types.Token{
-		Description:         "OK Group Global Utility Token",
+		Description:         "Blockchain of Hash Power",
 		Symbol:              common.NativeToken,
-		OriginalSymbol:      "OKT",
-		WholeName:           "OKT",
+		OriginalSymbol:      "BHP",
+		WholeName:           "BHP",
 		OriginalTotalSupply: totalSupply,
 		TotalSupply:         totalSupply,
 		Owner:               addr,
