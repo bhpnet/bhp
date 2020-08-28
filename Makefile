@@ -158,7 +158,7 @@ build-docker-bhpdnode:
 # Run a 4-node testnet locally
 localnet-start: build-linux localnet-stop
 	echo $(CURDIR)
-	@if ! [ -f build/node0/bhpd/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/bhpd:Z bhpnet/bhpdnode testnet --chain-id=testing minimum-gas-prices "2.5abhp" --v 4 -o . --starting-ip-address 192.168.10.2 ; fi
+	@if ! [ -f build/node0/bhpd/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/bhpd:Z bhpnet/bhpdnode testnet --chain-id=testing --minimum-gas-prices "2.5abhp" --v 4 -o . --starting-ip-address 192.168.10.2 ; fi
 	docker-compose up -d
 
 # Stop testnet
