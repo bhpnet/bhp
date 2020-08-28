@@ -1,7 +1,7 @@
 
 # BHP
 
-![banner](./docs/bhp.png)
+![banner](./docs/bhp.jpg)
 
 <div align="center">
   <a href="https://github.com/bhpnet/bhp/releases/latest">
