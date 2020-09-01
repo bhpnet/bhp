@@ -58,7 +58,9 @@ func main() {
 	rootCmd.AddCommand(client.NewCompletionCmd(rootCmd, true))
 	rootCmd.AddCommand(testnetCmd(ctx, cdc, app.ModuleBasics, genaccounts.AppModuleBasic{}))
 	rootCmd.AddCommand(replayCmd())
+	//rootCmd.AddCommand(ResetCmd(ctx, cdc, resetAppState))
 	server.AddCommands(ctx, cdc, rootCmd, newApp, exportAppStateAndTMValidators)
+	rootCmd.AddCommand(SnapshotCmd(cdc))
 
 	// prepare and add flags
 	executor := cli.PrepareBaseCmd(rootCmd, "GA", app.DefaultNodeHome)
