@@ -1,4 +1,4 @@
-# BHP Documentation
+# BHP Documents
 
 ![bhp](./img/bhp.jpg)
 
