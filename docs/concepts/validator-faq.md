@@ -49,3 +49,13 @@ There are many ways to migrate your validator, the most recommended way is:
 3.Replace the Full Node config folder with the Validator's
 
 4.Start the new Validator Node
+
+### How to upload my validator's logo to the [Explorers](../getting-start/explorers.md)
+
+1. Sign-up [Keybase](https://keybase.io/) with your validator's name
+
+2. Upload your logo as your Keybase account's avatar
+
+3. `Add a PGP key` to your Keybase account (I believe you will see this option after sign-up), and you will get a 16-digit string
+
+4. [Edit your validator](../cli-client/staking.md#bhpcli-tx-staking-edit-validator) and specify `--identity=<the_16_digit_string>`

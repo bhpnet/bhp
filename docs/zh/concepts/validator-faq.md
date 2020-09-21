@@ -49,3 +49,13 @@ order: 2
 3.将全节点的 `config` 文件夹替换为验证人的
 
 4.启动新的验证人节点
+
+### 如何将验证人的Logo上传到[区块浏览器](../getting-start/explorers.md)
+
+1. 使用验证人的名称注册[Keybase](https://keybase.io/)
+
+2. 上传Logo作为Keybase帐户的头像
+
+3. 点击`Add a PGP key`，创建一个PGP私钥，完成后您将获得一个16位的字符串
+
+4. [编辑验证人](../cli-client/staking.md#bhpcli-tx-staking-edit-validator)信息并指定`--identity=<16位的PGP字符串>`
