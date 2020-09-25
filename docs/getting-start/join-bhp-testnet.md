@@ -100,7 +100,11 @@ It will take a long time to sync from scratch, you can also download the [testne
 Start the full node with this command:
 
 ```shell script
-bhpd start
+# start the node (you can also use "nohup" or "systemd" to run in the background)
+# bhpd start
+
+# start the node in the background
+nohup bhpd start 1>bhpd.log 2>&1 &
 ```
 
 Check that everything is running smoothly:
@@ -125,6 +129,10 @@ bhpcli keys add <key-name>
 :::warning
 write the seed phrase in a safe place! It is the only way to recover your account if you ever forget your password.
 :::
+
+### Obtain test Token
+
+To get the test token, please refer to [here](https://faucet.bhpnet.io/)
 
 ### Confirm your node has caught-up
 

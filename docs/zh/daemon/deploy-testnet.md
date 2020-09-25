@@ -22,7 +22,7 @@ bhpcli keys add validator
 # 将该钱包地址添加到genesis文件中的genesis.app_state.accounts数组中
 # 注意: 此命令使您可以设置通证数量。确保此帐户有bhp，这是BHPnet上唯一的质押通证
 # with the genesis.app_state.staking.params.bond_denom denom, the default is staking
-bhpd add-genesis-account $(bhpcli keys show validator -a) 1000000000abhp
+bhpd add-genesis-account $(bhpcli keys show validator -a) 100000000000abhp
 
 # 生成创建验证人的交易。gentx存储在`~/.bhpd/config/`中
 bhpd gentx --name validator
@@ -66,9 +66,9 @@ bhpd unsafe-reset-all
 bhpd tendermint show-node-id
 ```
 
-- 查询[Tendermint Pubkey](../concepts/validator-faq.md#tendermint-密钥)，用于[identify your validator](../cli-client/staking.md),并将用于在共识过程中签署Pre-vote/Pre-commit。
+- 查询[Tendermint Pubkey](../validators/validator-faq.md#tendermint-密钥)，用于[identify your validator](../cli-client/staking.md),并将用于在共识过程中签署Pre-vote/Pre-commit。
 
-[Tendermint Key](../concepts/validator-faq.md#tendermint-密钥)存储在[priv_validator.json](intro.md#priv_validator-json)中，创建验证人后，请一定要记得[备份](../concepts/validator-faq.md#如何备份验证人节点)。
+[Tendermint Key](../validators/validator-faq.md#tendermint-密钥)存储在[priv_validator.json](intro.md#priv_validator-json)中，创建验证人后，请一定要记得[备份](../validators/validator-faq.md#如何备份验证人节点)。
 
 ```bash
 bhpd tendermint show-validator

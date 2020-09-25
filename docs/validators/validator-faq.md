@@ -6,9 +6,7 @@ order: 2
 
 ### How to Become an BHP Validator
 
-Refer to [Join The Mainnet](../getting-start/join-bhp-mainnet.md)
-
-It is also recommended to test your validator setup on the [Testnet](../getting-start/join-bhp-testnet.md)before launch
+Refer to [Join The Testnet](../getting-start/join-bhp-testnet.md)
 
 :::tip
 To earn more delegation for your validator, you are advised to:

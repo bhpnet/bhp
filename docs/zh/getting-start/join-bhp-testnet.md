@@ -97,7 +97,10 @@ minimum-gas-prices = ""
 
 ```
 # 启动节点（也可使用 nohup 或 systemd 等方式后台运行）
-bhpd start
+# bhpd start
+
+# 后台启动
+nohup bhpd start 1>bhpd.log 2>&1 &
 ```
 
 检查一切是否平稳运行中:
@@ -128,6 +131,10 @@ bhpcli keys add <key-name>
 :::warning
 在安全的地方备份好助记词！如果您忘记密码，这是恢复帐户的唯一方法。
 :::
+
+### 获得测试token
+
+浏览器访问该地址 [https://faucet.bhpnet.io/](https://faucet.bhpnet.io/) 领取测试token
 
 ### 确认节点同步状态
 

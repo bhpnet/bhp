@@ -6,9 +6,7 @@ order: 2
 
 ### 如何成为 BHP 验证人
 
-参考 [加入主网](../getting-start/join-bhp-mainnet.md)
-
-同时也推荐您运行主网验证人之前，在[测试网](../getting-start/join-bhp-testnet.md)上面测试验证人相关操作。
+参考 [加入测试网](../getting-start/join-bhp-testnet.md)
 
 :::tip
 想要获取更多的委托，您可以：
